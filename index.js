@@ -7,7 +7,7 @@ var fs = require("fs");
 var axios = require("axios");
 
 
-async function askQuestions(){
+async function main(){
     const questions = await inquirer.prompt([
     {
         type: "input",
@@ -33,25 +33,29 @@ async function askQuestions(){
         console.log(`Project Title: ${projectTitle}`);
         console.log(`Project Description: ${description}`);
 
-        let writeFile = fs.writeFileSync("username.md", `Username: ${username}`)
-
-        // let personalToken = " 96f7cd5aea19d593ca87496c19dd43b9290d799a";
-
-
         const gitName = username;
-        console.log(`gitname: ${gitName}`)
-        const apiURL = `https://api.github.com/users/${gitName}`
+        const apiURL = `https://api.github.com/users/` + `${gitName}`;
+        
         const userResponse = await axios.get( apiURL );
-        console.log(apiURL);
+        
+        let image = userResponse.data.avatar_url;
+    
+        // >>>>> write the README file
+        let readmeWrite = `
+        ![logo](${image})\n 
+        # Title\n 
+        Username: ${username}\n 
+        Project Title: ${projectTitle}\n 
+        ## Description\n 
+        Project Description: ${description}\n `
 
-
-        // use axios to make the api call with the input username
+        let writeFile = fs.writeFileSync("JC-readme.md", readmeWrite)
+        
 }
-
-
-askQuestions();
-
-
+//  !!!!!look at md file styling guide 
+// commit changes
+// prompt all sections
+main();
 
 function writeToFile(fileName, data) {
 
