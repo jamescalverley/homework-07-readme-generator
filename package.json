@@ -1,7 +1,6 @@
 {
   "name": "static-site",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,11 +8,21 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.19.0",
+    "axios": "^0.19.2",
     "dotenv": "^8.0.0",
     "electron": "^5.0.3",
     "electron-html-to": "^2.6.0",
-    "inquirer": "^6.3.1",
+    "inquirer": "^6.5.2",
     "open": "^6.3.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamescalverley/homework-07-readme-generator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jamescalverley/homework-07-readme-generator/issues"
+  },
+  "homepage": "https://github.com/jamescalverley/homework-07-readme-generator#readme",
+  "devDependencies": {},
+  "description": ""
 }
