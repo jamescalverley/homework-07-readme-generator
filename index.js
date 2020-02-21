@@ -23,15 +23,49 @@ async function main(){
         type: "input",
         name: "description",
         message: "What is the project description?:  "
+    },
+    {
+        type: "input",
+        name: "installation",
+        message: "What are the steps for installation?  "
+    },
+    {
+        type: "input",
+        name: "usage",
+        message: "Instructions for use? "
+    },
+    {
+        type: "input",
+        name: "licence",
+        message: "What type of licence do you need?  "
+    },
+    {
+        type: "input",
+        name: "contributing",
+        message: "List all collaborators "
+    },
+    {
+        type: "input",
+        name: "tests",
+        message: "Are there any tests? "
+    },
+    {
+        type: "input",
+        name: "questions",
+        message: "Are there any questions? "
     }
     ])
         let username = questions.username;
         let projectTitle = questions.projectTitle;
         let description = questions.description;
+        let installation = questions.installation;
+        let usage = questions.usage;
+        let licence = questions.licence;
+        let contributing = questions.contributing;
+        let tests = questions.tests;
+        let anyQuestions = questions.questions;
 
-        console.log(`Username: ${username}`);
-        console.log(`Project Title: ${projectTitle}`);
-        console.log(`Project Description: ${description}`);
+        
 
         const gitName = username;
         const apiURL = `https://api.github.com/users/` + `${gitName}`;
@@ -39,32 +73,17 @@ async function main(){
         const userResponse = await axios.get( apiURL );
         
         let image = userResponse.data.avatar_url;
-    
-        // >>>>> write the README file
-        let readmeWrite = `
-        ![logo](${image})\n 
-        # Title\n 
-        Username: ${username}\n 
-        Project Title: ${projectTitle}\n 
-        ## Description\n 
-        Project Description: ${description}\n `
+        let email = userResponse.data.email;
+        
+        
+        console.log(`EMAIL: ${email}`);
 
-        let writeFile = fs.writeFileSync("JC-readme.md", readmeWrite)
+
+        let readmeWrite = `![logo](${image})\n ### Username: ${username}\n ### Email: ${email}\n ## Project Title: ${projectTitle}\n ---\n ## Project Description\n ${description}\n ---\n ## Installation\n ${installation}\n ---\n ## Usage\n ${usage}\n ---\n ## Licence\n ${licence}\n ---\n ## Project Contributors\n ${contributing}\n ---\n ## Tests\n ${tests}\n ---\n ## Questions\n ${anyQuestions}\n ---\n`
+
+        let writeFile = fs.writeFileSync("JC-README.md", readmeWrite)
         
 }
-//  !!!!!look at md file styling guide 
-// commit changes
-// prompt all sections
+
 main();
 
-function writeToFile(fileName, data) {
-
-return 
-
-}
-
-function init() {
-
-}
-
-init();
