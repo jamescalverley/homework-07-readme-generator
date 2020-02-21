@@ -79,9 +79,9 @@ async function main(){
         console.log(`EMAIL: ${email}`);
 
 
-        let readmeWrite = `![logo](${image})\n ### Username: ${username}\n ### Email: ${email}\n ## Project Title: ${projectTitle}\n ---\n ## Project Description\n ${description}\n ---\n ## Installation\n ${installation}\n ---\n ## Usage\n ${usage}\n ---\n ## Licence\n ${licence}\n ---\n ## Project Contributors\n ${contributing}\n ---\n ## Tests\n ${tests}\n ---\n ## Questions\n ${anyQuestions}\n ---\n`
+        let readmeWrite = `![logo](${image})\n ### Username: ${username}\n ### Email: ${email}\n ## Project Title: ${projectTitle}\n ## Project Description\n ${description}\n ## Installation\n ${installation}\n ## Usage\n ${usage}\n ## Licence\n ${licence}\n ## Project Contributors\n ${contributing}\n ## Tests\n ${tests}\n ## Questions\n ${anyQuestions}\n`
 
-        let writeFile = fs.writeFileSync("JC-README.md", readmeWrite)
+        let writeFile = fs.writeFileSync("README.md", readmeWrite)
         
 }
 
