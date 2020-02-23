@@ -1,18 +1,18 @@
 ![logo](https://avatars1.githubusercontent.com/u/40436768?v=4)
  ### Username: jamescalverley
  ### Email: null
- ## Project Title: Sample Project
+ ## Project Title: Project A
  ## Project Description
- This is where the project description goes.
+ This is where the descrtipiton goes
  ## Installation
- This is where the install steps go.
+ Here are the steps
  ## Usage
- This is where the instructions go. 
+ Here are the instructions
  ## Licence
- This is where the licence goes.
+ MIT Licence
  ## Project Contributors
- This is where the collaborators go.
+ Serop, Anant
  ## Tests
- This is where the tests go.
+ No tests
  ## Questions
- This is where the questions go.
+ No questions

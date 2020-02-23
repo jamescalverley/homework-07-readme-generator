@@ -1,7 +1,5 @@
 // look at .split() and .join()
 
-
-
 var inquirer = require("inquirer");
 var fs = require("fs");
 var axios = require("axios");
@@ -22,12 +20,12 @@ async function main(){
     {
         type: "input",
         name: "description",
-        message: "What is the project description?:  "
+        message: "What is the project description?: "
     },
     {
         type: "input",
         name: "installation",
-        message: "What are the steps for installation?  "
+        message: "What are the steps for installation? "
     },
     {
         type: "input",
@@ -35,9 +33,23 @@ async function main(){
         message: "Instructions for use? "
     },
     {
-        type: "input",
+        type: "checkbox",
         name: "licence",
-        message: "What type of licence do you need?  "
+        message: "What type of licence do you need? ",
+        choices: [
+            {
+                name: "None"
+            },
+            {
+                name: "Apache Licence 2.0"
+            },
+            {
+                name: "GNU General Public Licence v3.0"
+            },
+            {
+                name: "MIT Licence"
+            }
+            ]
     },
     {
         type: "input",
@@ -75,9 +87,7 @@ async function main(){
         let image = userResponse.data.avatar_url;
         let email = userResponse.data.email;
         
-        
-        console.log(`EMAIL: ${email}`);
-
+    
 
         let readmeWrite = `![logo](${image})\n ### Username: ${username}\n ### Email: ${email}\n ## Project Title: ${projectTitle}\n ## Project Description\n ${description}\n ## Installation\n ${installation}\n ## Usage\n ${usage}\n ## Licence\n ${licence}\n ## Project Contributors\n ${contributing}\n ## Tests\n ${tests}\n ## Questions\n ${anyQuestions}\n`
 
