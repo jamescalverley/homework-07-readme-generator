@@ -92,6 +92,9 @@ async function main(){
         let readmeWrite = `![logo](${image})\n ### Username: ${username}\n ### Email: ${email}\n ## Project Title: ${projectTitle}\n ## Project Description\n ${description}\n ## Installation\n ${installation}\n ## Usage\n ${usage}\n ## Licence\n ${licence}\n ## Project Contributors\n ${contributing}\n ## Tests\n ${tests}\n ## Questions\n ${anyQuestions}\n`
 
         let writeFile = fs.writeFileSync("README.md", readmeWrite)
+
+
+        
         
 }
 

@@ -12,6 +12,7 @@
     "dotenv": "^8.0.0",
     "electron": "^5.0.3",
     "electron-html-to": "^2.6.0",
+    "fs": "0.0.1-security",
     "inquirer": "^6.5.2",
     "open": "^6.3.0"
   },
@@ -24,5 +25,5 @@
   },
   "homepage": "https://github.com/jamescalverley/homework-07-readme-generator#readme",
   "devDependencies": {},
-  "description": ""
+  "description": "![logo](https://avatars1.githubusercontent.com/u/40436768?v=4)  ### Username: jamescalverley  ### Email: null  ## Project Title: Project A  ## Project Description  This is where the descrtipiton goes  ## Installation  Here are the steps  ## Usage  Here are the instructions  ## Licence  MIT Licence  ## Project Contributors  Serop, Anant  ## Tests  No tests  ## Questions  No questions"
 }
